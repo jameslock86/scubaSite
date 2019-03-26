@@ -2,7 +2,7 @@
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url('../img/header-bg.jpg');
+  background-image: url('../img/TCEU-1.png');
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -29,6 +29,7 @@ header.masthead {
 @media(min-width:768px) {
   header.masthead {
     .intro-text {
+      z-index: 3;
       padding-top: 300px;
       padding-bottom: 200px;
       .intro-lead-in {
@@ -43,8 +44,22 @@ header.masthead {
         font-weight: 700;
         line-height: 75px;
         margin-bottom: 50px;
+        z-index: 3;
         @include heading-font;
       }
     }
   }
+}
+#overlay {
+  position: fixed;
+  
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
 }
